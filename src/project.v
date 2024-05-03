@@ -18,10 +18,10 @@ module tt_um_nlehrter (
 
 // All output pins must be assigned. If not used, assign to 0.
   assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
-  for (genvar i = 2; i < 8;i++) {
+  for (genvar i = 2; i < 8;i++) begin
     assign uio_out[i] = 0;
     assign uio_oe[i]  = 0;
-  };
+  end
 
   assign uio_oe[0] = 1;
   assign uio_oe[1] = 1;
